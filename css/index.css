@@ -31,7 +31,7 @@
 }
 
 body {
-	background-image: url(/images/background.png);
+	background-image: url(/images/index/background.png);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	-webkit-background-size: cover;
@@ -915,7 +915,7 @@ section {
 /* a {
 	outline: 1px solid black;
 } */
-img {
+/* img {
 	outline: 1px solid red;
 }
 p {
@@ -923,4 +923,4 @@ p {
 }
 div {
 	outline: 1px solid black;
-}
+} */

@@ -34,8 +34,3 @@ document.addEventListener('DOMContentLoaded', function () {
 		})
 	}
 })
-
-let subMenu = document.getElementById('sub-menu-pc')
-function toggleMenu() {
-	subMenu.classList.toggle('open-menu')
-}
