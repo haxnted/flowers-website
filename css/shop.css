@@ -1,9 +1,38 @@
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+@font-face {
+	font-family: Monserrat;
+	src: url(/fonts/monserrat.ttf);
+}
+@font-face {
+	font-family: PlayFairDisplayBold;
+	src: url(/fonts/playfair\ display.ttf);
+}
+@font-face {
+	font-family: Alternates;
+	src: url(/fonts/Montserrat\ Alternates.ttf);
+}
+@font-face {
+	font-family: JosefinSlab;
+	src: url(/fonts/josefin-slab-regular.ttf);
+}
+@font-face {
+	font-family: MontserratAlternates-Black;
+	src: url(/fonts/montserrat-alternates-black.ttf);
 }
 
+@font-face {
+	font-family: Montserrat Alternates SemiBold;
+	src: url(/fonts/Montserrat\ Alternates\ SemiBold.ttf);
+}
+* {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
 header {
 	display: flex;
 	justify-content: space-between;
@@ -74,22 +103,24 @@ header #Account img {
 }
 
 body {
-	background-color: #ffffff;
+	background-color: #fbfbfe;
 }
+/*--------------------------------MAIN*/
 main {
 	display: flex;
 	flex-wrap: wrap;
 }
-
+.filter-cards {
+	display: none;
+}
 aside {
 	padding: 5px;
-	outline: 1px solid black;
-	flex: 1 1 100px;
+	box-shadow: 5px 0 5px rgba(0, 0, 0, 0.2);
+	flex: 1 1 200px;
 }
 
 section {
-	flex: 4 1 800px;
-	outline: 1px solid black;
+	flex: 4 1 825px;
 }
 @media (max-width: 550px) {
 	header {
@@ -120,19 +151,155 @@ section {
 	}
 }
 /*---------------------------ASIDE*/
-
-/*---------------------------MAIN-CONTENT*/
-.container-magazine {
-	padding: 20px;
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 20px;
+aside h2 {
+	font-size: 20px;
+	text-align: center;
+	font-family: Montserrat Alternates SemiBold;
 }
-
-.product > img {
+.rule-product {
+	padding: 10px;
+	margin: 5px;
+	background-color: #eeeef2;
+}
+.range-input{
+	height: 50px;
+}
+.range-input a{
 	width: 100%;
-	height: 400px;
+	text-align: center;
 }
-.body-product {
+.rule-product a {
+	font-family: JosefinSlab;
+	font-weight: 100;
 }
+.rule-product input {
+	float: right;
+}
+.rule-product input[type='range'] {
+	height: 20px;
+	width: 100%;
+}
+input[type='checkbox'] {
+	width: 20px;
+	height: 20px;
+}
+input[type='checkbox']:hover,
+input[type='checkbox']:checked {
+	background-color: #df7f6a;
+}
+
+.aside-btn {
+	margin-top: 4px;
+}
+
+@media(max-width: 1024px){
+	main aside span{
+		display: grid;
+		grid-template-columns: repeat(2, 50%);
+		grid-template-rows: auto;
+	}
+.rule-product {
+	padding: 5px;
+	margin: 5px;
+	background-color: #eeeef2;
+}
+	h2{
+		width: 100%;
+	}
+}
+@media(max-width: 425px){
+	main aside span{
+		display: block;
+	}
+}
+/*---------------------------MAIN-CONTENT*/
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+.card-btn {
+	background-color: white;
+	border: 1px solid #cccccc;
+	border-radius: 0.5rem;
+	color: #696969;
+	padding: 0.5rem;
+	text-transform: lowercase;
+	display: block;
+	width: 100%;
+	font-size: 15px;
+	letter-spacing: 1px;
+}
+.card-btn:hover {
+	border: 1px solid #df7f6a;
+	background: #df7f6a;
+	color: white;
+}
+
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	margin: 10px;
+}
+
+.item {
+	padding: 1rem;
+	@media (min-width: 40rem) {
+		width: 50%;
+	}
+	@media (min-width: 56rem) {
+		width: 33.3%;
+	}
+}
+
+.card {
+	box-shadow: 0px 0px 10px grey;
+	background-color: white;
+	border-radius: 0.25rem;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+.сard img:hover {
+	filter: brightness(80%);
+}
+.card__content {
+	box-shadow: 0px 0px 10px grey;
+	display: flex;
+	flex: 1 1 auto;
+	flex-direction: column;
+	padding: 1rem;
+}
+
+.title-content {
+	color: #df7f6a;
+	border-bottom: 1px solid;
+}
+.title-content a:nth-child(1) {
+	/* text-transform: uppercase; */
+	float: left;
+	font-size: 1.25rem;
+	font-weight: 900;
+	font-family: JosefinSlab;
+}
+.title-content a:nth-child(2) {
+	float: right;
+	font-family: Montserrat Alternates SemiBold;
+	font-size: 1rem;
+}
+.title-content a:nth-child(2)::after {
+	content: ' ₽';
+}
+
+.description-content {
+	text-align: justify;
+	margin-top: 10px;
+	color: gray;
+	flex: 1 1 auto;
+	font-size: 0.875rem;
+	line-height: 1.5;
+	margin-bottom: 1.25rem;
+}
+
 /*---------------------------FOOTER*/

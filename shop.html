@@ -26,80 +26,119 @@
 
 		<main>
 			<aside>
+				<h2>Фильтры для поиска</h2>
 				<span>
-					<div>
-						<a>Price</a>
-						<input type="range" min="6" max="400" />
+					<div class="rule-product range-input">
+						<a id="pricemin">Цена от: 1000 ₽</a>
+						<input type="range"min="1000" max="20000" id="rangemin" value="400"/>
 					</div>
-					<div>
+					<div class="rule-product range-input">
+						<a id="pricemax">Цена до: 1000 ₽</a>
+						<input type="range" min="1000" max="20000" id="rangemax" value="400"/>
+					</div>
+					<div class="rule-product">
 						<a>Только в наличии</a>
-						<input type="checkbox" />
+						<input type="checkbox" id="exists" />
 					</div>
-					<div>
+					<div class="rule-product">
 						<a>Только букеты</a>
-						<input type="checkbox" />
+						<input type="checkbox" id="bouquetonly" />
 					</div>
+					<div class="rule-product">
+						<a>Цена по возрастанию</a>
+						<input type="checkbox" id="orderByAscending" />
+					</div>
+					<div class="rule-product">
+						<a>Цена по убыванию</a>
+						<input type="checkbox" id="orderByDescending" />
+					</div>
+
+					<button
+						class="card-btn aside-btn"
+						id="toggleCategory"
+						onclick="RunFilter()"
+					>
+						Применить фильтры
+					</button>
+					<button
+						class="card-btn aside-btn"
+						id="toggleCategory"
+						onclick="ResetFilter()"
+					>
+						Cбросить фильтры
+					</button>
 				</span>
 			</aside>
 			<section>
-				<div class="container-magazine">
-					<div class="product">
-						<!-- <img src="http://www.w3.org/2000/svg" /> -->
-						<img src="images/shop/1.jpg" alt="img" />
-						<div class="body-product">
-							<a class="title">Букет: 9 пионовидных роз 90 см</a>
-							<a class="discription"></a>
-							<div class="buy">
-								<button></button>
-							</div>
+				<ul class="cards">
+					<li class="item">
+						<div class="card">
+							<img src="images/shop/1.jpg" alt="1" />
 						</div>
-					</div>
-					<div class="product">
-						<!-- <img src="http://www.w3.org/2000/svg" /> -->
-						<img src="images/shop/2.jpg" alt="img" />
-						<div class="body-product">
-							<a class="title">Букет: 71 белая и розовая роза</a>
-							<a class="discription"></a>
-							<div class="buy">
-								<button></button>
+						<div class="card__content">
+							<div class="title-content">
+								<a>Розы</a>
+								<a>1400</a>
 							</div>
+							<p class="description-content">В наличии. Букет.</p>
+							<button class="card-btn">В корзину</button>
 						</div>
-					</div>
-					<div class="product">
-						<!-- <img src="http://www.w3.org/2000/svg" /> -->
-						<img src="images/shop/3.jpg" alt="img" />
-						<div class="body-product">
-							<a class="title">Букет: 71 белая и розовая роза</a>
-							<a class="discription"></a>
-							<div class="buy">
-								<button></button>
+					</li>
+					<li class="item">
+						<div class="card">
+							<img src="images/shop/2.jpg" alt="2" />
+						</div>
+						<div class="card__content">
+							<div class="title-content">
+								<a>Фиалки</a>
+								<a>1600</a>
 							</div>
+							<p class="description-content">В наличии. Букет.</p>
+							<button class="card-btn">В корзину</button>
 						</div>
-					</div>
-					<div class="product">
-						<!-- <img src="http://www.w3.org/2000/svg" /> -->
-						<img src="images/shop/4.jpg" alt="img" />
-						<div class="body-product">
-							<a class="title">Букет: Пионовидные розы</a>
-							<a class="discription"></a>
-							<div class="buy">
-								<button></button>
+					</li>
+					<li class="item">
+						<div class="card">
+							<img src="images/shop/3.jpg" alt="3" />
+						</div>
+						<div class="card__content">
+							<div class="title-content">
+								<a>Item 3</a>
+								<a>5400</a>
 							</div>
+							<p class="description-content">Предварительно под заказ.</p>
+							<button class="card-btn">В корзину</button>
 						</div>
-					</div>
-					<div class="product">
-						<!-- <img src="http://www.w3.org/2000/svg" /> -->
-						<img src="images/shop/5.jpg" alt="img" />
-						<div class="body-product">
-							<a class="title">Букет: 71 белая и розовая роза</a>
-							<a class="discription"></a>
-							<div class="buy">
-								<button></button>
+					</li>
+					<li class="item">
+						<div class="card">
+							<img src="images/shop/4.jpg" alt="4" />
+						</div>
+						<div class="card__content">
+							<div class="title-content">
+								<a>Item 4</a>
+								<a>400</a>
 							</div>
+							<p class="description-content">Предварительно под заказ.</p>
+							<button class="card-btn">В корзину</button>
 						</div>
-					</div>
-				</div>
+					</li>
+					<li class="item">
+						<div class="card">
+							<img src="images/shop/5.jpg" alt="5" />
+						</div>
+						<div class="card__content">
+							<div class="title-content">
+								<a>Item 5</a>
+								<a>3200</a>
+							</div>
+							<p class="description-content">В наличии.</p>
+							<button class="card-btn">В корзину</button>
+						</div>
+					</li>
+				</ul>
 			</section>
 		</main>
 	</body>
+	<script src="js/shop.js"></script>
 </html>
