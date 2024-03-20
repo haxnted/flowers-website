@@ -173,7 +173,7 @@
     </section>
     <!-------------------------------------->
     
-    <section class="discount-block">
+    <section class="discount-block margin-top">
         <div class="discount-box-left">
             <div class="left-box-img">
                 <img src="images/index/Leaf 1.png" alt="img">
@@ -197,34 +197,95 @@
 
     <!-------------------------------------->
 
-    <!-- <section class="roses-info-block">
-        <div class="container-photo">
-                <img src="images/index/Rectangle_.png">
-                <img src="images/index/Rectangle2.png">
-                <img src="images/index/block-best-roses.png">
-        <div>
-        <div class="container-text">
-            <img src="images/index/block-best-roses1.png">
-            <p>We select the best flowers</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat totam saepe temporibus! Eligendi maiores nostrum at non assumenda, nobis.</p>
-            <button>READ MORE</button>
+    <section class="roses-info-block margin-top">
+        <div class="container-roses">
+            <div class="left-block-image">
+                <div class="container-photo">
+                    <img class="main-background-img" src="images/index/block-best-roses.png" alt="img">
+                    <img class="img2-rectangle" src="images/index/Rectangle_.png" alt="img">
+                    <img class="img1-rectangle" src="images/index/Rectangle2.png" alt="img">
+                </div>
+            </div>
+            <div class="container-text">
+                <span>
+                    <img class="container-text__image" src="images/index/block-best-roses1.png">
+                    <div class="container-text_body">
+                        <p class="container-text__title">We select the best flowers</p>
+                        <p class="container-text__information">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat totam saepe temporibus! Eligendi maiores nostrum at non assumenda, nobis.</p>
+                        <button class="gray-button sized-btn"><a>READ MORE</a></button>
+                    </div>
+                </span>
+            </div>
         </div>
-    </section> -->
+    </section>
 
     <!-------------------------------------->
-    <!-- <section class="register-block">
-        <a>Subscribe to our newsletter</a>
-        <a>Lorem ipsum dolor, sit amet consectetur adipisicing elit, sel do eiusmod tempor incididunt ut labore et dolore magna aliqua</a>
-        <div class="inputs-container">
-            <input type="text" maxlength="40" placeholder="Your Name">
-            <input type="mail" placeholder="Mail">
-            <textarea type="text" maxlength="150" placeholder="Message">
-        </div> -->
-    <!-- <footer>
+    <section class="roses-info-block margin-top">
+        <div class="container-roses">
+            <div class="container-text">
+                <span>
+                    <img class="container-text__image" src="images/index/block-best-roses1.png">
+                    <div class="container-text_body">
+                        <p class="container-text__title">We take care of the details</p>
+                        <p class="container-text__information">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat totam saepe temporibus! Eligendi maiores nostrum at non assumenda, nobis.</p>
+                        <button class="gray-button sized-btn"><a>READ MORE</a></button>
+                    </div>
+                </span>
+            </div>
+            <div class="left-block-image">
+                <div class="container-photo">
+                    <img class="main-background-img img-right" src="images/index/block-best-roses.png" alt="img">
+                    <img class="img2-rectangle" src="images/index/Rectangle_.png" alt="img">
+                    <img class="img1-rectangle" src="images/index/Rectangle2.png" alt="img">
+                </div>
+            </div>
+        </div>
+    <!-------------------------------------->
+
+    <section class="roses-info-block margin-top">
+        <div class="container-roses">
+            <div class="left-block-image">
+                <div class="container-photo">
+                    <img class="main-background-img img-right" src="images/index/block-best-roses.png" alt="img">
+                    <img class="img2-rectangle" src="images/index/Rectangle_.png" alt="img">
+                    <img class="img1-rectangle" src="images/index/Rectangle2.png" alt="img">
+                </div>
+            </div>
+            <div class="container-text">
+                <span>
+                    <img class="container-text__image" src="images/index/block-best-roses1.png">
+                    <div class="container-text_body">
+                        <p class="container-text__title">We love what we do</p>
+                        <p class="container-text__information">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat totam saepe temporibus! Eligendi maiores nostrum at non assumenda, nobis.</p>
+                        <button class="gray-button sized-btn"><a>READ MORE</a></button>
+                    </div>
+                </span>
+            </div>
+        </div>
+    <!-------------------------------------->
+
+    <section class="section-register-block">
+        <div>
+            <div class="register-block_header">
+                <p class="register-block_header_title">Subscribe to our newsletter</p>
+                <p class="register-block_header_description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, unde! A repellat quia delectus, expedita, est possimus laboriosam tenetur.</p>
+            </div>
+            <div>
+                <form class="register-form">
+                    <input type="text" placeholder="Your Name">
+                    <input type="email" placeholder="Mail">
+                    <textarea  placeholder="Messages" id="Message" ></textarea>
+                </form>
+                <input type="submit" id="submit">
+            </div>
+        </div>
+    </section>
+
+    <footer>
         <div class="footer-container">
             <span>
-                <a>About</a>
-                <ul>
+                <a onclick="ShowList1()">About</a>
+                <ul id="list1">
                     <li><a>History</a></li>
                     <li><a>Our Team</a></li>
                     <li><a>Mission Statement</a></li>
@@ -234,8 +295,8 @@
             </span>
     
             <span>
-                <a>What we do</a>
-                <ul>
+                <a onclick="ShowList2()">What we doy</a>
+                <ul id="list2">
                     <li><a>News and stories</a></li>
                     <li><a>Publications</a></li>
                     <li><a>Take action</a></li>
@@ -245,8 +306,8 @@
             </span>
 
             <span>
-                <a>Your Company</a>
-                <ul>                
+                <a onclick="ShowList3()">Your Company</a>
+                <ul id="list3">                
                     <li><a>Halimun Street 25</a></li>
                     <li><a>Jakata, city 1234</a></li>
                     <li><a>www.yourflowersite.com</a></li>
@@ -259,7 +320,9 @@
             <img src="images/index/Instagram.png" alt="Inst">
             <img src="images/index/Youtube.png" alt="YT">
         </div>
-    </footer> -->
+    </footer>
+    
 </body>
-<script src="js/scroll-list-products.js"></script>
+<script src="js/scroll-list-products.js"></script> 
+<script src="js/index.js"></script> 
 </html> 
