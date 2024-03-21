@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
+    		<title>Flowers Store</title>
 </head>
 <body>
     <header>
@@ -13,19 +14,31 @@
         <nav>
             <ul class="menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a>Services</a></li>
-                <li><a>About</a></li>
-                <li><a>Contact</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
                 <li class="sign-in"><a href="auth-signin.html">sign in</a></li>
             </ul>
         </nav>
         <div class="actions">
             <a href="account.html"><img src="images/index/header_section.png" alt="section"></a>
             <a href="shop.html"><img src="images/index/header_shop.png" alt="shop"></a>
-            <img src="images/index/header_menu.png" alt="menu">
+            <img src="images/index/header_menu.png" alt="menu" onclick="ShowHeaderMenu()">
         </div>
         <!--меню для пк версии-->
-        
+        <div class="pc-sub-menu" id="pc-submenu">
+            <div class="about-user">
+                <img src="images/account/account.png" alt="">
+                <span>
+                    <p class="about-user__name">Дарья Требина</p>
+                    <p class="about-user__balance">Баланс: 1452р</p>
+                </span>
+            </div>
+            <ul class="pc-sub-menu-help">
+                <li><a>Account</a></li>
+                <li><a>Top up money</a></li>
+            </ul>
+        </div>
         <!-- <div class="sub-menu-wrap">
             <div class="sub-menu">
                 <div class="user-info">
