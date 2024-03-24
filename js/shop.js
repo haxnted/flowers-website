@@ -37,41 +37,37 @@ rangeInputMin.addEventListener('input', function () {
 	textRangeMin.textContent = `Цена от: ${minPriceValue} ₽`
 })
 
-
 function RunFilter(params) {
-    var maxPriceValue = parseInt(rangeInputMax.value);
-    var minPriceValue = parseInt(rangeInputMin.value);
-    var exists = document.getElementById('exists').checked;
-    var onlybouquet = document.getElementById('bouquetonly').checked;
-    var orderByAscending = document.getElementById('orderByAscending').checked;
-    var orderByDescending = document.getElementById('orderByDescending').checked;
-    var items = document.querySelectorAll('.item');
+	var maxPriceValue = parseInt(rangeInputMax.value)
+	var minPriceValue = parseInt(rangeInputMin.value)
+	var exists = document.getElementById('exists').checked
+	var onlybouquet = document.getElementById('bouquetonly').checked
+	var orderByAscending = document.getElementById('orderByAscending').checked
+	var orderByDescending = document.getElementById('orderByDescending').checked
+	var items = document.querySelectorAll('.item')
 
-    var itemsArray = Array.from(items);
+	var itemsArray = Array.from(items)
 
-    // Фильтрация товаров
-    itemsArray.forEach(function (item) {
-        var price = parseInt(item.querySelector('.title-content a:nth-child(2)').textContent);
-        var descriptionText = item.querySelector('.description-content').textContent;
-        var isInStock = descriptionText.includes('В наличии');
-        var hasBouquet = descriptionText.includes('Букет');
+	itemsArray.forEach(function (item) {
+		var price = parseInt(
+			item.querySelector('.title-content a:nth-child(2)').textContent
+		)
+		var descriptionText = item.querySelector('.description-content').textContent
+		var isInStock = descriptionText.includes('В наличии')
+		var hasBouquet = descriptionText.includes('Букет')
 
-        if (
-            price >= minPriceValue &&
-            price <= maxPriceValue &&
-            (!exists || isInStock) &&
-            (!onlybouquet || hasBouquet)
-        ) {
-            item.style.display = 'block';
-        } else {
-            item.style.display = 'none';
-        }
-    });
-
+		if (
+			price >= minPriceValue &&
+			price <= maxPriceValue &&
+			(!exists || isInStock) &&
+			(!onlybouquet || hasBouquet)
+		) {
+			item.style.display = 'block'
+		} else {
+			item.style.display = 'none'
+		}
+	})
 }
-    
-
-
 
 function ResetFilter() {
 	var items = document.querySelectorAll('.item')

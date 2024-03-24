@@ -29,11 +29,11 @@ body {
 }
 .welcome-block {
 	height: 400px;
-	background-color: #eaf6ff;
 	display: flex;
 	flex-direction: column;
 	text-align: center;
 	justify-content: center;
+	background-color: #eaf6ff;
 }
 .welcome-block h2 {
 	font-family: Montserrat Alternates SemiBold;

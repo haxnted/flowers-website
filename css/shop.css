@@ -48,8 +48,8 @@ header #Home,
 header #Home:visited,
 header #Home:active {
 	font-size: 17px;
-	color: white;
 	text-decoration: none;
+	color: white;
 }
 header #Home:hover {
 	text-decoration: underline;
@@ -73,7 +73,6 @@ header span a {
 	border: none;
 	width: 300px;
 	height: 35px;
-	background: #e9e5de;
 	border: none;
 	font-size: 13pt;
 	float: left;
@@ -82,6 +81,7 @@ header span a {
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
+	background: #e9e5de;
 }
 .input-search .icon-search {
 	position: absolute;
@@ -95,11 +95,11 @@ header span a {
 	height: 30px;
 }
 header #Account img {
-	background: #e9e5de;
-	border-radius: 5px;
 	height: 35px;
 	margin-left: 10px;
 	margin-right: 10px;
+	border-radius: 5px;
+	background: #e9e5de;
 }
 
 body {
@@ -114,9 +114,9 @@ main {
 	display: none;
 }
 aside {
+	flex: 1 1 200px;
 	padding: 5px;
 	box-shadow: 5px 0 5px rgba(0, 0, 0, 0.2);
-	flex: 1 1 200px;
 }
 
 section {
@@ -219,16 +219,16 @@ img {
 }
 
 .card-btn {
-	background-color: white;
-	border: 1px solid #cccccc;
-	border-radius: 0.5rem;
-	color: #696969;
-	padding: 0.5rem;
-	text-transform: lowercase;
 	display: block;
 	width: 100%;
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+	text-transform: lowercase;
 	font-size: 15px;
 	letter-spacing: 1px;
+	color: #696969;
+	background-color: white;
+	border: 1px solid #cccccc;
 }
 .card-btn:hover {
 	border: 1px solid #df7f6a;
@@ -254,30 +254,29 @@ img {
 }
 
 .card {
-	box-shadow: 0px 0px 10px grey;
-	background-color: white;
-	border-radius: 0.25rem;
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
+	border-radius: 0.25rem;
+	box-shadow: 0px 0px 10px grey;
+	background-color: white;
 }
 .сard img:hover {
 	filter: brightness(80%);
 }
 .card__content {
-	box-shadow: 0px 0px 10px grey;
 	display: flex;
 	flex: 1 1 auto;
 	flex-direction: column;
+	box-shadow: 0px 0px 10px grey;
 	padding: 1rem;
 }
 
 .title-content {
-	color: #df7f6a;
 	border-bottom: 1px solid;
+	color: #df7f6a;
 }
 .title-content a:nth-child(1) {
-	/* text-transform: uppercase; */
 	float: left;
 	font-size: 1.25rem;
 	font-weight: 900;
@@ -305,8 +304,8 @@ img {
 /*---------------------------FOOTER*/
 footer {
 	margin-top: 80px;
-	background-color: #404040;
 	padding: 40px;
+	background-color: #404040;
 }
 .footer-container {
 	display: flex;
@@ -324,19 +323,19 @@ footer {
 }
 
 .footer-container span > a {
-	font-family: Alternates, sans-serif;
-	letter-spacing: 1px;
-	font-size: 30px;
 	display: block;
+	font-family: Alternates, sans-serif;
+	font-size: 30px;
+	letter-spacing: 1px;
 	text-align: left;
-	color: white;
 	margin-bottom: 5px;
+	color: white;
 }
 .footer-container li a {
-	color: white;
 	font-size: 20px;
 	font-weight: normal;
 	font-family: Montserrat Alternates Regular;
+	color: white;
 }
 
 .social-group {
@@ -347,18 +346,18 @@ footer {
 }
 .social-group p {
 	font-weight: 100;
-	color: white;
 	font-size: 13px;
 	padding: 0px 10px 0px 0px;
 	font-family: Alternates, sans-serif;
+	color: white;
 }
 .social-group img {
 	margin-left: 15px;
-	border: 1px solid white;
-	border-radius: 50%;
 	padding: 3px;
 	height: 9px;
 	width: 9px;
+	border-radius: 50%;
+	border: 1px solid white;
 }
 @media (max-width: 1400px) {
 	.footer-container {
@@ -396,14 +395,14 @@ footer {
 	.footer-container span > a {
 		padding: 8px;
 		border-radius: 5px;
-		background-color: #df7f6a;
-		border: 1px solid #df7f6a;
 		text-align: center;
 		letter-spacing: 1px;
+		background-color: #df7f6a;
+		border: 1px solid #df7f6a;
 	}
 	.footer-container span > a:hover {
-		color: black;
 		text-decoration: underline;
+		color: black;
 	}
 	.footer-container span ul {
 		display: none;
@@ -419,7 +418,6 @@ footer {
 		text-align: center;
 	}
 }
-/*debug*/
 .margin-top {
 	margin-top: 50px;
 }
